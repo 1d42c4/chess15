@@ -1,0 +1,191 @@
+[Event "Chess, Clearly: lesson 1"]
+[Site "https://knightway8.github.io/chess15/lessons/01-every-square-has-a-permanent-address.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2"]
+
+2. Nf3 { The White knight travels from g1 to f3. The letter N means knight; f3 is its destination. } 2... Nc6 { Black develops the b8 knight to c6. Black uses exactly the same square names as White. } *
+
+[Event "Chess, Clearly: lesson 2"]
+[Site "https://knightway8.github.io/chess15/lessons/02-a-rook-stops-at-the-first-obstacle.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/7p/8/8/P7/8/R7/K7 w - - 0 1"]
+
+1. Ra3 { The rook moves one square up the file. Its own pawn is immediately in front of it. } 1... h6 { Black advances the h-pawn; this does not remove White’s obstruction. } 2. Rg3 { The rook uses the third rank instead. A blocked file does not prevent movement along a clear rank. } *
+
+[Event "Chess, Clearly: lesson 3"]
+[Site "https://knightway8.github.io/chess15/lessons/03-a-bishop-always-keeps-its-square-color.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/7p/8/8/8/8/3P4/K1B5 w - - 0 1"]
+
+1. Ba3 { The bishop follows c1–b2–a3. All three squares have the same color. } 1... h6 { Black’s pawn move leaves the bishop’s route unchanged. } 2. Bc5 { From a3, the bishop travels through b4 to c5, again remaining on dark squares. } *
+
+[Event "Chess, Clearly: lesson 4"]
+[Site "https://knightway8.github.io/chess15/lessons/04-a-knight-jumps-then-lands.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/7p/8/8/3N4/8/8/K7 w - - 0 1"]
+
+1. Nf5 { The knight jumps from d4 to f5. It does not pass through e4 or f4. } 1... h6 { Black advances a pawn on the opposite wing. } 2. Nd6 { From f5, the knight jumps to d6. Its next set of destinations is measured from this new square. } *
+
+[Event "Chess, Clearly: lesson 5"]
+[Site "https://knightway8.github.io/chess15/lessons/05-pawns-move-one-way-and-capture-another.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/8/8/3pp3/4P3/8/8/K7 w - - 0 1"]
+
+1. exd5 { White’s e-pawn captures on d5. The e records the pawn’s original file, and x records a capture. } 1... e4 { The Black e5 pawn advances to the now-empty e4 square. } 2. d6 { White’s pawn, now on the d-file, advances straight ahead to d6. } *
+
+[Event "Chess, Clearly: lesson 6"]
+[Site "https://knightway8.github.io/chess15/lessons/06-a-king-cannot-capture-a-defended-piece.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/8/8/8/4p3/3r4/2K5/8 w - - 0 1"]
+
+1. Kb2 { The king instead steps to b2, a square not attacked by the rook or pawn in this diagram. } *
+
+[Event "Chess, Clearly: lesson 7"]
+[Site "https://knightway8.github.io/chess15/lessons/07-blocking-a-check-closes-the-attacking-line.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "4r2k/8/8/8/8/8/2P5/4KB2 w - - 0 1"]
+
+1. Be2 { The bishop blocks the e-file. White is no longer in check. } 1... Rxe2+ { If Black exchanges the rook for the bishop, the rook now checks from e2. } 2. Kxe2 { White’s king captures the rook. In this position, e2 has no remaining Black defender. } *
+
+[Event "Chess, Clearly: lesson 8"]
+[Site "https://knightway8.github.io/chess15/lessons/08-capture-the-checker-only-when-the-capture-ends-the-check.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/8/8/8/8/8/4r3/R3K3 w - - 0 1"]
+
+1. Kxe2 { The king captures the rook and reaches an unattacked square. The check is over. } *
+
+[Event "Chess, Clearly: lesson 9"]
+[Site "https://knightway8.github.io/chess15/lessons/09-castling-moves-the-king-and-rook-together.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "r3k2r/8/8/8/8/8/8/R3K2R w KQkq - 0 1"]
+
+1. O-O { White castles king-side: the king moves e1–g1 and the h1 rook moves to f1. } 1... O-O-O { Black castles queen-side: the king moves e8–c8 and the a8 rook moves to d8. } *
+
+[Event "Chess, Clearly: lesson 10"]
+[Site "https://knightway8.github.io/chess15/lessons/10-an-attacked-transit-square-prevents-castling.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "k4r2/8/8/8/8/8/8/4K2R w K - 0 1"]
+
+1. Kd2 { White makes a legal king move to d2 instead. This also gives up White’s future castling right. } *
+
+[Event "Chess, Clearly: lesson 11"]
+[Site "https://knightway8.github.io/chess15/lessons/11-en-passant-is-an-immediate-pawn-capture.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/3p4/8/4P3/8/8/8/K7 b - - 0 1"]
+
+1... d5 { Black advances the pawn from d7 to d5 in one move. } 2. exd6 { White captures en passant: the e5 pawn lands on d6, and the Black pawn on d5 is removed. } *
+
+[Event "Chess, Clearly: lesson 12"]
+[Site "https://knightway8.github.io/chess15/lessons/12-promotion-creates-a-new-piece-immediately.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/2P5/8/8/8/8/8/K7 w - - 0 1"]
+
+1. c8=Q+ { The pawn becomes a queen on c8. The new queen immediately checks along the eighth rank. } 1... Kg7 { Black escapes to g7, which the c8 queen does not attack in this position. } *
+
+[Event "Chess, Clearly: lesson 13"]
+[Site "https://knightway8.github.io/chess15/lessons/13-read-notation-as-a-short-description-of-a-move.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2"]
+
+2. Nf3 { White develops the g1 knight to f3. No x appears because nothing is captured. } 2... Nc6 { Black develops the b8 knight to c6. } 3. Bc4 { White develops the f1 bishop to c4, aiming along the diagonal toward f7. } *
+
+[Event "Chess, Clearly: lesson 14"]
+[Site "https://knightway8.github.io/chess15/lessons/14-checkmate-means-every-legal-defense-fails.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "6k1/5ppp/8/8/8/8/6PP/4R1K1 w - - 0 1"]
+
+1. Re8# { The rook checks along rank 8. The king cannot escape to f8 or h8, and its own pawns occupy the squares on rank 7. } 1-0
+
+[Event "Chess, Clearly: lesson 15"]
+[Site "https://knightway8.github.io/chess15/lessons/15-stalemate-can-turn-a-won-position-into-a-draw.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "1/2-1/2"]
+[SetUp "1"]
+[FEN "7k/5K2/8/6Q1/8/8/8/8 w - - 0 1"]
+
+1. Qg6 { This quiet queen move is stalemate. Black’s king is not checked on h8, but g8, g7, and h7 are all unavailable. } 1/2-1/2
+
+[Event "Chess, Clearly: lesson 16"]
+[Site "https://knightway8.github.io/chess15/lessons/16-count-the-whole-exchange-not-its-first-capture.html"]
+[Date "2026.09.05"]
+[Round "-"]
+[White "Illustration"]
+[Black "Illustration"]
+[Result "*"]
+[SetUp "1"]
+[FEN "7k/8/4p3/3r4/8/8/6B1/3R2K1 w - - 0 1"]
+
+1. Rxd5 { White takes the Black rook. This is only the first step of the exchange. } 1... exd5 { Black recaptures with the e6 pawn, removing White’s rook. } 2. Bxd5 { White’s bishop takes that pawn, completing the illustrated exchange. } *

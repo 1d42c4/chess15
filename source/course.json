@@ -1,0 +1,582 @@
+{
+  "slug": "foundations",
+  "title": "Chess, Clearly",
+  "subtitle": "Sixteen direct lessons in seeing and understanding the board.",
+  "color": "#23604b",
+  "audience": "Begin here if piece movement, checks, or notation still feel uncertain.",
+  "lessons": [
+    {
+      "title": "Every square has a permanent address",
+      "lead": "Coordinates turn a picture into something you can describe.",
+      "read": "Files are the vertical columns a through h. Ranks are the horizontal rows 1 through 8. The square e4 is where file e meets rank 4. White begins on ranks 1 and 2; Black begins on ranks 7 and 8. The names stay fixed when a board is viewed from the other side.",
+      "explain": "The central squares d4, e4, d5, and e5 are useful landmarks. In the first diagram, the White pawn is on e4 and the Black pawn is on e5. The final diagram adds two knights without changing either pawn’s address. Following a move means locating its destination, identifying the moving piece, and noticing which square it left.",
+      "caution": "A coordinate is not an instruction about which direction to move. A Black pawn on e5 advances toward e4, because Black moves toward lower-numbered ranks.",
+      "remember": "The picture can rotate. The names of the squares do not.",
+      "number": 1,
+      "filename": "01-every-square-has-a-permanent-address.html",
+      "opening": [
+        "e4",
+        "e5"
+      ],
+      "openingPgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 e5 *",
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+      "steps": [
+        {
+          "san": "Nf3",
+          "uci": "g1f3",
+          "note": "The White knight travels from g1 to f3. The letter N means knight; f3 is its destination.",
+          "side": "w",
+          "moveNumber": 2,
+          "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2"
+        },
+        {
+          "san": "Nc6",
+          "uci": "b8c6",
+          "note": "Black develops the b8 knight to c6. Black uses exactly the same square names as White.",
+          "side": "b",
+          "moveNumber": 2,
+          "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3"
+        }
+      ],
+      "finalFen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 193
+    },
+    {
+      "title": "A rook stops at the first obstacle",
+      "lead": "A rook travels along ranks and files, but never jumps.",
+      "read": "The White rook is on a2, below its own a4 pawn. It can move to a3, but it cannot pass through a4 to reach a5 or a8. The pawn blocks the file. The rook also has horizontal moves along rank 2, provided its own king remains safe.",
+      "explain": "Tracing a rook move is a simple line-reading task: start at the rook and stop at the first occupied square. If that square contains an enemy piece, the rook may capture it when the move is legal. If it contains a friendly piece, the rook must stop before it. A capture ends the move; the rook does not continue beyond the captured piece.",
+      "caution": "An apparently open line may still lead to an illegal move if moving the rook exposes its own king. Geometry tells you where a rook travels; king safety decides which of those moves are legal.",
+      "remember": "Read one straight line at a time, stopping at its first occupied square.",
+      "number": 2,
+      "filename": "02-a-rook-stops-at-the-first-obstacle.html",
+      "fen": "7k/7p/8/8/P7/8/R7/K7 w - - 0 1",
+      "steps": [
+        {
+          "san": "Ra3",
+          "uci": "a2a3",
+          "note": "The rook moves one square up the file. Its own pawn is immediately in front of it.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "7k/7p/8/8/P7/R7/8/K7 b - - 1 1"
+        },
+        {
+          "san": "h6",
+          "uci": "h7h6",
+          "note": "Black advances the h-pawn; this does not remove White’s obstruction.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "7k/8/7p/8/P7/R7/8/K7 w - - 0 2"
+        },
+        {
+          "san": "Rg3",
+          "uci": "a3g3",
+          "note": "The rook uses the third rank instead. A blocked file does not prevent movement along a clear rank.",
+          "side": "w",
+          "moveNumber": 2,
+          "fen": "7k/8/7p/8/P7/6R1/8/K7 b - - 1 2"
+        }
+      ],
+      "finalFen": "7k/8/7p/8/P7/6R1/8/K7 b - - 1 2",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 220
+    },
+    {
+      "title": "A bishop always keeps its square color",
+      "lead": "A bishop follows diagonals and never changes color.",
+      "read": "The bishop on c1 stands on a dark square. Its forward-right diagonal begins with d2, occupied by its own pawn. Its forward-left diagonal is clear through b2 to a3. A bishop cannot jump over the d2 pawn, even though squares beyond it are empty.",
+      "explain": "A diagonal changes the file and rank by the same amount. That keeps the square color constant. Consequently, a dark-squared bishop can never capture a piece on a light square. The bishop may become powerful when its diagonals open, or restricted when friendly pawns occupy those diagonals. Its range depends on the actual pawn arrangement, not just its nominal value.",
+      "caution": "A bishop restricted by its own pawns can still perform a useful defensive job. Before judging it as bad, identify what it protects and whether a pawn move can safely open a diagonal.",
+      "remember": "A bishop’s color is permanent; the freedom of its diagonals can change.",
+      "number": 3,
+      "filename": "03-a-bishop-always-keeps-its-square-color.html",
+      "fen": "7k/7p/8/8/8/8/3P4/K1B5 w - - 0 1",
+      "steps": [
+        {
+          "san": "Ba3",
+          "uci": "c1a3",
+          "note": "The bishop follows c1–b2–a3. All three squares have the same color.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "7k/7p/8/8/8/B7/3P4/K7 b - - 1 1"
+        },
+        {
+          "san": "h6",
+          "uci": "h7h6",
+          "note": "Black’s pawn move leaves the bishop’s route unchanged.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "7k/8/7p/8/8/B7/3P4/K7 w - - 0 2"
+        },
+        {
+          "san": "Bc5",
+          "uci": "a3c5",
+          "note": "From a3, the bishop travels through b4 to c5, again remaining on dark squares.",
+          "side": "w",
+          "moveNumber": 2,
+          "fen": "7k/8/7p/2B5/8/8/3P4/K7 b - - 1 2"
+        }
+      ],
+      "finalFen": "7k/8/7p/2B5/8/8/3P4/K7 b - - 1 2",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 197
+    },
+    {
+      "title": "A knight jumps, then lands",
+      "lead": "A knight’s destination matters more than the squares between.",
+      "read": "From d4, a knight has eight geometric destinations: b3, b5, c2, c6, e2, e6, f3, and f5. Each is two squares in one direction and one at a right angle. Unlike a rook or bishop, a knight ignores pieces between its start and destination.",
+      "explain": "The destination must be empty or occupied by an enemy piece. A friendly piece on the destination prevents that particular move. A capture removes the enemy piece on the landing square only. Knights change square color on every move, and their short jumps can attack pieces that seem separated by a wall of pawns.",
+      "caution": "Eight destinations is a maximum near the center, not a promise of eight legal moves everywhere. Board edges remove destinations, friendly occupants block landings, and a pin to the king may make otherwise normal jumps illegal.",
+      "remember": "Trace the L-shaped displacement; do not trace a path through intervening squares.",
+      "number": 4,
+      "filename": "04-a-knight-jumps-then-lands.html",
+      "fen": "7k/7p/8/8/3N4/8/8/K7 w - - 0 1",
+      "steps": [
+        {
+          "san": "Nf5",
+          "uci": "d4f5",
+          "note": "The knight jumps from d4 to f5. It does not pass through e4 or f4.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "7k/7p/8/5N2/8/8/8/K7 b - - 1 1"
+        },
+        {
+          "san": "h6",
+          "uci": "h7h6",
+          "note": "Black advances a pawn on the opposite wing.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "7k/8/7p/5N2/8/8/8/K7 w - - 0 2"
+        },
+        {
+          "san": "Nd6",
+          "uci": "f5d6",
+          "note": "From f5, the knight jumps to d6. Its next set of destinations is measured from this new square.",
+          "side": "w",
+          "moveNumber": 2,
+          "fen": "7k/8/3N3p/8/8/8/8/K7 b - - 1 2"
+        }
+      ],
+      "finalFen": "7k/8/3N3p/8/8/8/8/K7 b - - 1 2",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 201
+    },
+    {
+      "title": "Pawns move one way and capture another",
+      "lead": "Forward movement and diagonal capture are different rules.",
+      "read": "White’s e4 pawn cannot advance to e5 because a Black pawn occupies e5. It cannot capture that pawn straight ahead. It can capture the Black pawn on d5, one square diagonally forward. Black pawns use the same rule in the opposite direction, toward lower-numbered ranks.",
+      "explain": "A pawn’s identity follows it after a capture: it is now a pawn on its new file and continues moving forward from there. A pawn may advance two squares only from its own starting rank, with both intervening and destination squares empty. That initial two-square move is an option, not an obligation.",
+      "caution": "Pawns never move backward and never capture straight ahead. Their attacks still point diagonally forward even when their straight-ahead movement is blocked. This is why a blocked pawn can continue to protect a neighboring piece.",
+      "remember": "Movement follows the file; ordinary captures use a forward diagonal.",
+      "number": 5,
+      "filename": "05-pawns-move-one-way-and-capture-another.html",
+      "fen": "7k/8/8/3pp3/4P3/8/8/K7 w - - 0 1",
+      "steps": [
+        {
+          "san": "exd5",
+          "uci": "e4d5",
+          "note": "White’s e-pawn captures on d5. The e records the pawn’s original file, and x records a capture.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "7k/8/8/3Pp3/8/8/8/K7 b - - 0 1"
+        },
+        {
+          "san": "e4",
+          "uci": "e5e4",
+          "note": "The Black e5 pawn advances to the now-empty e4 square.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "7k/8/8/3P4/4p3/8/8/K7 w - - 0 2"
+        },
+        {
+          "san": "d6",
+          "uci": "d5d6",
+          "note": "White’s pawn, now on the d-file, advances straight ahead to d6.",
+          "side": "w",
+          "moveNumber": 2,
+          "fen": "7k/8/3P4/8/4p3/8/8/K7 b - - 0 2"
+        }
+      ],
+      "finalFen": "7k/8/3P4/8/4p3/8/8/K7 b - - 0 2",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 195
+    },
+    {
+      "title": "A king cannot capture a defended piece",
+      "lead": "Removing the checking piece does not automatically make a capture safe.",
+      "read": "The White king on c2 is next to the Black rook on d3. Capturing it may look attractive, but the e4 pawn attacks d3. After Kxd3, White’s king would occupy a square attacked by that pawn. The capture is therefore illegal.",
+      "explain": "A king moves one square in any direction, subject to the attacks that exist after the move. When considering a capture, imagine the captured piece removed and the king placed on its destination. Then inspect enemy rook lines, bishop diagonals, queen lines, knight jumps, pawn attacks, and the enemy king. A defender may become visible only after the captured piece disappears.",
+      "caution": "Kings also cannot stand next to one another. Each king attacks its neighboring squares. The king is not captured in a legal game: a player must respond to check, and checkmate ends the game when no legal response exists.",
+      "remember": "A king’s destination must be safe in the resulting position.",
+      "number": 6,
+      "filename": "06-a-king-cannot-capture-a-defended-piece.html",
+      "fen": "7k/8/8/8/4p3/3r4/2K5/8 w - - 0 1",
+      "steps": [
+        {
+          "san": "Kb2",
+          "uci": "c2b2",
+          "note": "The king instead steps to b2, a square not attacked by the rook or pawn in this diagram.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "7k/8/8/8/4p3/3r4/1K6/8 b - - 1 1"
+        }
+      ],
+      "finalFen": "7k/8/8/8/4p3/3r4/1K6/8 b - - 1 1",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 187
+    },
+    {
+      "title": "Blocking a check closes the attacking line",
+      "lead": "A sliding-piece check can sometimes be answered by interposition.",
+      "read": "Black’s rook on e8 checks White’s king on e1 along the open e-file. White’s bishop on f1 can move diagonally to e2. That places a piece between the rook and king and stops the rook’s line of attack.",
+      "explain": "The displayed continuation explains why Be2 is a workable block here: the king protects the blocking bishop’s square. The broader method is to identify every square between the checking piece and the king. A legal interposition must land on one of those squares and leave the king safe from every attack.",
+      "caution": "A knight check cannot be blocked, because the knight jumps. A rook, bishop, or queen checking from an adjacent square leaves no intervening square. In double check, capturing or blocking only one attacker is insufficient; the king must move.",
+      "remember": "A block works only when it interrupts the check and leaves no other check behind.",
+      "number": 7,
+      "filename": "07-blocking-a-check-closes-the-attacking-line.html",
+      "fen": "4r2k/8/8/8/8/8/2P5/4KB2 w - - 0 1",
+      "steps": [
+        {
+          "san": "Be2",
+          "uci": "f1e2",
+          "note": "The bishop blocks the e-file. White is no longer in check.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "4r2k/8/8/8/8/8/2P1B3/4K3 b - - 1 1"
+        },
+        {
+          "san": "Rxe2+",
+          "uci": "e8e2",
+          "note": "If Black exchanges the rook for the bishop, the rook now checks from e2.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "7k/8/8/8/8/8/2P1r3/4K3 w - - 0 2"
+        },
+        {
+          "san": "Kxe2",
+          "uci": "e1e2",
+          "note": "White’s king captures the rook. In this position, e2 has no remaining Black defender.",
+          "side": "w",
+          "moveNumber": 2,
+          "fen": "7k/8/8/8/8/8/2P1K3/8 b - - 0 2"
+        }
+      ],
+      "finalFen": "7k/8/8/8/8/8/2P1K3/8 b - - 0 2",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 198
+    },
+    {
+      "title": "Capture the checker only when the capture ends the check",
+      "lead": "A checking piece is not immune to capture.",
+      "read": "The Black rook on e2 checks the White king on e1. There is no piece defending e2. White may therefore capture the rook with the king. This differs from a rook protected by a pawn, bishop, or another piece.",
+      "explain": "When your king is checked, useful response categories are moving the king, capturing the checking piece, and blocking its line when a block is possible. The rules do not require a king move if another piece can capture or block legally. The essential condition is always the same: after your response, your king is no longer attacked.",
+      "caution": "A capture that exposes a second attacker is not a legal answer. For example, removing a rook from the king’s file might uncover a bishop or another rook behind it. Do not stop the safety check when the first attacker disappears. Here the board is deliberately simple so the successful capture can be seen clearly.",
+      "remember": "A check is answered by the resulting safety of the king, not by the name of the move.",
+      "number": 8,
+      "filename": "08-capture-the-checker-only-when-the-capture-ends-the-check.html",
+      "fen": "7k/8/8/8/8/8/4r3/R3K3 w - - 0 1",
+      "steps": [
+        {
+          "san": "Kxe2",
+          "uci": "e1e2",
+          "note": "The king captures the rook and reaches an unattacked square. The check is over.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "7k/8/8/8/8/8/4K3/R7 b - - 0 1"
+        }
+      ],
+      "finalFen": "7k/8/8/8/8/8/4K3/R7 b - - 0 1",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 201
+    },
+    {
+      "title": "Castling moves the king and rook together",
+      "lead": "Castling is one move with a precise starting position.",
+      "read": "White’s king and both rooks are on their original squares, and the squares between them are empty. The castling rights recorded for this diagram mean they have not previously moved. Neither White king-side transit square is attacked.",
+      "explain": "The king always moves two squares toward the chosen rook. The rook lands immediately on the other side of the king. Queen-side castling does not put the king on b1 or b8. A clear path is necessary, but a clear path alone does not establish the right to castle: a king or participating rook that moved earlier cannot regain that right by returning home.",
+      "caution": "The king may not castle out of check, across an attacked square, or into check. An attacked rook does not by itself prevent castling. In queen-side castling, the b-file square must be empty, but the king does not cross it.",
+      "remember": "Check the move history, the empty path, and the king’s three relevant squares.",
+      "number": 9,
+      "filename": "09-castling-moves-the-king-and-rook-together.html",
+      "fen": "r3k2r/8/8/8/8/8/8/R3K2R w KQkq - 0 1",
+      "steps": [
+        {
+          "san": "O-O",
+          "uci": "e1g1",
+          "note": "White castles king-side: the king moves e1–g1 and the h1 rook moves to f1.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "r3k2r/8/8/8/8/8/8/R4RK1 b kq - 1 1"
+        },
+        {
+          "san": "O-O-O",
+          "uci": "e8c8",
+          "note": "Black castles queen-side: the king moves e8–c8 and the a8 rook moves to d8.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "2kr3r/8/8/8/8/8/8/R4RK1 w - - 2 2"
+        }
+      ],
+      "finalFen": "2kr3r/8/8/8/8/8/8/R4RK1 w - - 2 2",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 198
+    },
+    {
+      "title": "An attacked transit square prevents castling",
+      "lead": "The king cannot use castling to cross an unsafe square.",
+      "read": "The White king is not currently checked on e1. The squares f1 and g1 are empty. However, the Black rook on f8 attacks f1 down the open f-file. White would have to cross f1 when castling king-side, so O-O is illegal.",
+      "explain": "Castling checks three king squares: its starting square, the square it crosses, and its destination. All must meet the relevant safety conditions. Looking only at g1 misses the problem in this diagram. A defending piece on f1 would not make crossing an attacked f1 legal, and a defended king destination is still unsafe if an enemy piece attacks it.",
+      "caution": "Moving another piece to interrupt the rook’s file might change the position and make castling possible later, provided the king and rook retain their rights. The displayed king move simply illustrates a legal alternative; it is not a claim that every position should be solved by moving the king.",
+      "remember": "An empty square can still be an attacked square.",
+      "number": 10,
+      "filename": "10-an-attacked-transit-square-prevents-castling.html",
+      "fen": "k4r2/8/8/8/8/8/8/4K2R w K - 0 1",
+      "steps": [
+        {
+          "san": "Kd2",
+          "uci": "e1d2",
+          "note": "White makes a legal king move to d2 instead. This also gives up White’s future castling right.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "k4r2/8/8/8/8/8/3K4/7R b - - 1 1"
+        }
+      ],
+      "finalFen": "k4r2/8/8/8/8/8/3K4/7R b - - 1 1",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 191
+    },
+    {
+      "title": "En passant is an immediate pawn capture",
+      "lead": "The exceptional capture depends on the move just played.",
+      "read": "White has a pawn on e5. Black’s pawn is on d7 and can advance two squares. If Black chooses d7–d5, White may capture as though the pawn had stopped on d6. This special opportunity exists only on White’s next move.",
+      "explain": "This is the unusual case in which a pawn captures onto an empty destination square. The captured pawn is beside the starting square rather than on the landing square. After the capture, White has a pawn on d6 and d5 is empty. The diagrams show both changes, which are easy to miss when reading notation alone.",
+      "caution": "The same arrangement without Black’s immediately preceding two-square advance would not permit en passant. White cannot save the opportunity for later. As with every move, the capture must also leave White’s king safe; removing two pawns from a rank can sometimes expose a rook attack.",
+      "remember": "The last move matters: a two-square pawn advance creates a one-move opportunity.",
+      "number": 11,
+      "filename": "11-en-passant-is-an-immediate-pawn-capture.html",
+      "fen": "7k/3p4/8/4P3/8/8/8/K7 b - - 0 1",
+      "steps": [
+        {
+          "san": "d5",
+          "uci": "d7d5",
+          "note": "Black advances the pawn from d7 to d5 in one move.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "7k/8/8/3pP3/8/8/8/K7 w - d6 0 2"
+        },
+        {
+          "san": "exd6",
+          "uci": "e5d6",
+          "note": "White captures en passant: the e5 pawn lands on d6, and the Black pawn on d5 is removed.",
+          "side": "w",
+          "moveNumber": 2,
+          "fen": "7k/8/3P4/8/8/8/8/K7 b - - 0 2"
+        }
+      ],
+      "finalFen": "7k/8/3P4/8/8/8/8/K7 b - - 0 2",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 198
+    },
+    {
+      "title": "Promotion creates a new piece immediately",
+      "lead": "A pawn reaching the final rank must become a queen, rook, bishop, or knight.",
+      "read": "White’s pawn on c7 is one step from the final rank. The c8 square is empty. Advancing to c8 includes choosing the replacement piece; White cannot leave a pawn on c8 and decide later.",
+      "explain": "A queen is usually the strongest practical choice because it combines rook and bishop movement. The choice does not depend on which pieces were captured earlier, so a player can have more than one queen. The equals sign in c8=Q makes the promotion easy to read; the plus sign records the check created by the new queen.",
+      "caution": "Sometimes a knight promotion gives a useful fork, or a rook promotion avoids stalemate. Those exceptions depend on the actual position. Promotion never permits a new king, and a promoted rook does not create a new right to castle. The replacement piece begins working as part of the promotion move itself.",
+      "remember": "Reaching the last rank changes both the pawn’s identity and the board’s threats.",
+      "number": 12,
+      "filename": "12-promotion-creates-a-new-piece-immediately.html",
+      "fen": "7k/2P5/8/8/8/8/8/K7 w - - 0 1",
+      "steps": [
+        {
+          "san": "c8=Q+",
+          "uci": "c7c8q",
+          "note": "The pawn becomes a queen on c8. The new queen immediately checks along the eighth rank.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "2Q4k/8/8/8/8/8/8/K7 b - - 0 1"
+        },
+        {
+          "san": "Kg7",
+          "uci": "h8g7",
+          "note": "Black escapes to g7, which the c8 queen does not attack in this position.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "2Q5/6k1/8/8/8/8/8/K7 w - - 1 2"
+        }
+      ],
+      "finalFen": "2Q5/6k1/8/8/8/8/8/K7 w - - 1 2",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 205
+    },
+    {
+      "title": "Read notation as a short description of a move",
+      "lead": "Piece letters and square names carry most of the information.",
+      "read": "In English algebraic notation, K means king, Q queen, R rook, B bishop, and N knight. Pawns normally have no piece letter. A move such as Nf3 says that a knight moves to f3; the position tells you which knight can do so.",
+      "explain": "A capture adds x, as in Bxe6. A check adds +, and checkmate is commonly written #. O-O and O-O-O are the special castling symbols. If two pieces of the same kind can legally reach one destination, notation adds enough of the starting file or rank to distinguish them, as in Nbd2. Move numbers pair White’s move with Black’s reply.",
+      "caution": "Notation describes what happened; it does not prove that the move is good. A checking move can still be a mistake. When following a line, update the board after every move so that captures, vacated lines, and new defenders remain visible.",
+      "remember": "Name the piece, locate the destination, then update the position.",
+      "number": 13,
+      "filename": "13-read-notation-as-a-short-description-of-a-move.html",
+      "opening": [
+        "e4",
+        "e5"
+      ],
+      "openingPgn": "[Event \"?\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"?\"]\n[White \"?\"]\n[Black \"?\"]\n[Result \"*\"]\n\n1. e4 e5 *",
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+      "steps": [
+        {
+          "san": "Nf3",
+          "uci": "g1f3",
+          "note": "White develops the g1 knight to f3. No x appears because nothing is captured.",
+          "side": "w",
+          "moveNumber": 2,
+          "fen": "rnbqkbnr/pppp1ppp/8/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2"
+        },
+        {
+          "san": "Nc6",
+          "uci": "b8c6",
+          "note": "Black develops the b8 knight to c6.",
+          "side": "b",
+          "moveNumber": 2,
+          "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3"
+        },
+        {
+          "san": "Bc4",
+          "uci": "f1c4",
+          "note": "White develops the f1 bishop to c4, aiming along the diagonal toward f7.",
+          "side": "w",
+          "moveNumber": 3,
+          "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3"
+        }
+      ],
+      "finalFen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 207
+    },
+    {
+      "title": "Checkmate means every legal defense fails",
+      "lead": "A back-rank mate combines an open line with a trapped king.",
+      "read": "Black’s king sits behind its own f7, g7, and h7 pawns. White’s rook has a clear route up the e-file. Black has no rook or other piece available to block an attack on the eighth rank.",
+      "explain": "To recognize mate, account for every kind of response. Black cannot capture the checking rook because the king is two files away. There is no Black piece to interpose on f8. The rook covers the king’s lateral escapes, while the pawn shelter prevents a move forward. The position therefore ends immediately in checkmate.",
+      "caution": "The same back-rank arrangement is not automatically mate if another defender can block, capture the rook, or provide a legal escape. An earlier pawn move may create an escape square, but such a move can have other weaknesses. The actual diagram, rather than the familiar shape alone, determines the result.",
+      "remember": "Check plus no legal response is checkmate.",
+      "number": 14,
+      "filename": "14-checkmate-means-every-legal-defense-fails.html",
+      "fen": "6k1/5ppp/8/8/8/8/6PP/4R1K1 w - - 0 1",
+      "steps": [
+        {
+          "san": "Re8#",
+          "uci": "e1e8",
+          "note": "The rook checks along rank 8. The king cannot escape to f8 or h8, and its own pawns occupy the squares on rank 7.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "4R1k1/5ppp/8/8/8/8/6PP/6K1 b - - 1 1"
+        }
+      ],
+      "finalFen": "4R1k1/5ppp/8/8/8/8/6PP/6K1 b - - 1 1",
+      "checkmate": true,
+      "stalemate": false,
+      "wordCount": 187
+    },
+    {
+      "title": "Stalemate can turn a won position into a draw",
+      "lead": "A king with no legal move is not necessarily checkmated.",
+      "read": "White has overwhelming material, but Black’s king has very little room. White’s king covers g8 and g7. The queen’s placement will decide whether Black is checked, allowed to move, or left with no move while not in check.",
+      "explain": "The game is drawn immediately because Black has no legal move and is not in check. A stronger move in the starting position is Qh4#, which checks up the h-file while White’s king covers the g-file escapes. The difference between these two queen moves is not material: it is whether the trapped king is actually attacked.",
+      "caution": "When the opponent has only a king, inspect its legal moves before making a quiet move. A movable enemy pawn or piece can prevent stalemate even when the king itself is trapped. Stalemate concerns the absence of every legal move by the player, not just the absence of king moves.",
+      "remember": "No moves with check is mate; no moves without check is stalemate.",
+      "number": 15,
+      "filename": "15-stalemate-can-turn-a-won-position-into-a-draw.html",
+      "fen": "7k/5K2/8/6Q1/8/8/8/8 w - - 0 1",
+      "steps": [
+        {
+          "san": "Qg6",
+          "uci": "g5g6",
+          "note": "This quiet queen move is stalemate. Black’s king is not checked on h8, but g8, g7, and h7 are all unavailable.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "7k/5K2/6Q1/8/8/8/8/8 b - - 1 1"
+        }
+      ],
+      "finalFen": "7k/5K2/6Q1/8/8/8/8/8 b - - 1 1",
+      "checkmate": false,
+      "stalemate": true,
+      "wordCount": 196
+    },
+    {
+      "title": "Count the whole exchange, not its first capture",
+      "lead": "Recaptures explain what a trade really costs.",
+      "read": "White’s rook attacks the Black rook on d5. The Black e6 pawn protects that rook. White’s bishop on g2 looks along f3 and e4 toward d5, ready to capture there after the file exchange.",
+      "explain": "Both sides lost a rook, so the rook values cancel. Black also lost a pawn, while White’s bishop survived. In this continuation, White gained one pawn. This ledger is clearer than reacting emotionally to a rook disappearing from the board. Counting also requires following the attackers after they move: the bishop’s route to d5 stayed clear.",
+      "caution": "Black is not obliged to recapture, and material is not the only consideration in a real position. Checks, mating threats, and a trapped surviving piece can alter the decision. The displayed line teaches the accounting method: list everything removed and identify what remains after the last relevant recapture.",
+      "remember": "Evaluate the position after the exchange, not the excitement of the first capture.",
+      "number": 16,
+      "filename": "16-count-the-whole-exchange-not-its-first-capture.html",
+      "fen": "7k/8/4p3/3r4/8/8/6B1/3R2K1 w - - 0 1",
+      "steps": [
+        {
+          "san": "Rxd5",
+          "uci": "d1d5",
+          "note": "White takes the Black rook. This is only the first step of the exchange.",
+          "side": "w",
+          "moveNumber": 1,
+          "fen": "7k/8/4p3/3R4/8/8/6B1/6K1 b - - 0 1"
+        },
+        {
+          "san": "exd5",
+          "uci": "e6d5",
+          "note": "Black recaptures with the e6 pawn, removing White’s rook.",
+          "side": "b",
+          "moveNumber": 1,
+          "fen": "7k/8/8/3p4/8/8/6B1/6K1 w - - 0 2"
+        },
+        {
+          "san": "Bxd5",
+          "uci": "g2d5",
+          "note": "White’s bishop takes that pawn, completing the illustrated exchange.",
+          "side": "w",
+          "moveNumber": 2,
+          "fen": "7k/8/8/3B4/8/8/8/6K1 b - - 0 2"
+        }
+      ],
+      "finalFen": "7k/8/8/3B4/8/8/8/6K1 b - - 0 2",
+      "checkmate": false,
+      "stalemate": false,
+      "wordCount": 198
+    }
+  ],
+  "repo": "chess15",
+  "series": [
+    {
+      "repo": "chess15",
+      "title": "Chess, Clearly"
+    },
+    {
+      "repo": "chess16",
+      "title": "Openings, Explained"
+    },
+    {
+      "repo": "chess17",
+      "title": "Tactics, Made Visible"
+    },
+    {
+      "repo": "chess18",
+      "title": "Endgames, Step by Step"
+    }
+  ]
+}
